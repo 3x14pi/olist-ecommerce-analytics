@@ -1,8 +1,8 @@
-# 🛒 Olist — Analisi Vendite & Clienti
+#  Olist — Analisi Vendite & Clienti
 
-Progetto di Data Analytics sul dataset pubblico [Olist Brazilian E-Commerce](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce): dai dati grezzi fino a una **dashboard interattiva** che risponde alle domande della direzione di un marketplace.
+Progetto di analisi sul dataset pubblico [Olist Brazilian E-Commerce](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce): dai dati grezzi fino a una **dashboard interattiva** che risponde alle domande della direzione di un marketplace.
 
-### 🔗 **[▶ Apri la dashboard interattiva su Tableau Public](https://public.tableau.com/app/profile/antonio.ferri4043/viz/Olist-AnalisiVenditeClienti/Dashboard1)**
+###  **[▶ Apri la dashboard interattiva su Tableau Public](https://public.tableau.com/app/profile/antonio.ferri4043/viz/Olist-AnalisiVenditeClienti/Dashboard1)**
 
 ![Dashboard](result/dashboard.png)
 
@@ -29,7 +29,7 @@ Ho costruito l'**intera pipeline analitica** — dai dati grezzi alla dashboard 
 
 ## 🔍 Metodologia (pipeline)
 1. **Data Understanding** — analisi delle 9 tabelle, qualità dei dati → [`notebook/01`](notebook/)
-2. **Modello dati** — diagramma ER / star schema → [`docs/data_model.png`](docs/data_model.png)
+2. **Modello dati** — diagramma / star schema → [`docs/data_model.png`](docs/data_model.png)
 3. **ETL** — pulizia + caricamento in PostgreSQL → [`notebook/02`](notebook/)
 4. **Analisi SQL** — 5 domande di business come viste riusabili → [`sql/analisi.sql`](sql/analisi.sql)
 5. **Segmentazione RFM** — clienti per valore (Recency, Frequency, Monetary) → [`sql/v_rfm_segmenti.sql`](sql/v_rfm_segmenti.sql)
@@ -40,9 +40,8 @@ Ho costruito l'**intera pipeline analitica** — dai dati grezzi alla dashboard 
 .
 ├── notebook/     # Jupyter: 01 data understanding, 02 ETL
 ├── sql/          # viste di analisi + segmentazione RFM
-├── docs/         # diagramma del modello dati + screenshot dashboard
-├── result/       # export aggregati (KPI, categorie, trend, RFM, dashboard)
-└── data/         # dati Olist — da scaricare da Kaggle 
+├── docs/         # diagramma del modello dati
+├── result/       # export aggregati (KPI, categorie, trend, RFM) + dashboard
 ```
 
 
