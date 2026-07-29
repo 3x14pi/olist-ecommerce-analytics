@@ -33,7 +33,7 @@ Ho costruito l'**intera pipeline analitica** — dai dati grezzi alla dashboard 
 3. **ETL** — pulizia + caricamento in PostgreSQL → [`notebook/02`](notebook/)
 4. **Analisi SQL** — 5 domande di business come viste riusabili → [`sql/analisi.sql`](sql/analisi.sql)
 5. **Segmentazione RFM** — clienti per valore (Recency, Frequency, Monetary) → [`sql/v_rfm_segmenti.sql`](sql/v_rfm_segmenti.sql)
-6. **Visualizzazione** — dashboard interattiva in Tableau
+6. **Visualizzazione** — dashboard interattiva in Tableau →  [`result/dashboard.png`](result/dashboard.png)
 
 ## 📁 Struttura del progetto
 ```
