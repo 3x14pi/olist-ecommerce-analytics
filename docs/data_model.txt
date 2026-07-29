@@ -1,0 +1,102 @@
+// ===================== TABELLE =====================
+
+Table cust {
+  customer_id varchar [pk]               // unico (99.441)
+  customer_unique_id varchar             // NON unico (3.345 duplicati) = persona reale -> niente [unique]
+  customer_zip_code_prefix int
+  customer_city varchar
+  customer_state varchar
+}
+
+Table geo {
+  // Nessuna PK pulita: tanti punti per zip -> da aggregare a 1 riga/zip prima dell'uso
+  geolocation_zip_code_prefix int
+  geolocation_lat float
+  geolocation_lng float
+  geolocation_city varchar
+  geolocation_state varchar
+}
+
+Table order_items {
+  order_id varchar
+  order_item_id int
+  product_id varchar
+  seller_id varchar
+  shipping_limit_date timestamp
+  price float
+  freight_value float
+  indexes {
+    (order_id, order_item_id) [pk]       // chiave COMPOSTA (order_id da solo non e unico)
+  }
+}
+
+Table order_payment {
+  order_id varchar
+  payment_sequential int
+  payment_type varchar
+  payment_installments int
+  payment_value float
+  indexes {
+    (order_id, payment_sequential) [pk]  // composta (piu pagamenti per ordine)
+  }
+}
+
+Table order_review {
+  review_id varchar                      // NON unico (789 duplicati)
+  order_id varchar
+  review_score int
+  review_comment_title varchar
+  review_comment_message varchar
+  review_creation_date timestamp
+  review_answer_timestamp timestamp
+  indexes {
+    (review_id, order_id) [pk]           // composta (relazione molti-a-molti)
+  }
+}
+
+Table order {
+  order_id varchar [pk]
+  customer_id varchar
+  order_status varchar
+  order_purchase_timestamp timestamp
+  order_approved_at timestamp
+  order_delivered_carrier_date timestamp
+  order_delivered_customer_date timestamp
+  order_estimated_delivery_date timestamp
+}
+
+Table product {
+  product_id varchar [pk]
+  product_category_name varchar
+  product_name_lenght float
+  product_description_lenght float
+  product_photos_qty float
+  product_weight_g float
+  product_length_cm float
+  product_height_cm float
+  product_width_cm float
+}
+
+Table seller {
+  seller_id varchar [pk]
+  seller_zip_code_prefix int
+  seller_city varchar
+  seller_state varchar
+}
+
+Table product_cat_name {
+  product_category_name varchar [pk]
+  product_category_name_english varchar
+}
+
+// ===================== RELAZIONI =====================
+
+Ref: order_items.order_id > order.order_id
+Ref: order_items.product_id > product.product_id
+Ref: order_items.seller_id > seller.seller_id
+Ref: order.customer_id > cust.customer_id
+Ref: product.product_category_name > product_cat_name.product_category_name
+Ref: order_payment.order_id > order.order_id
+Ref: order_review.order_id > order.order_id
+Ref: cust.customer_zip_code_prefix > geo.geolocation_zip_code_prefix
+Ref: seller.seller_zip_code_prefix > geo.geolocation_zip_code_prefix
