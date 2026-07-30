@@ -29,14 +29,14 @@ ordine: la **Frequency è poco discriminante**. Ho quindi usato uno score di
 frequenza a gradini (1 / 2 / 3+ ordini) e dato peso maggiore a **Recency e
 Monetary** nella definizione dei segmenti.
 
-|| Segmento           | % clienti | % fatturato | Azione consigliata            |
-| ------------------ | --------- | ----------- | ----------------------------- |
-| Campioni           | 15,5%     | 29,3%       | Trattenere: Programmi VIP, fidelizzazione |
-| A rischio          | 14,7%     | 28,8%       | Riconquistare: offerte mirate  |
+| Segmento           | % clienti | % fatturato | Azione consigliata                          |
+| ------------------ | --------- | ----------- | ------------------------------------------- |
+| Campioni           | 15,5%     | 29,3%       | Trattenere: programmi VIP, fidelizzazione   |
+| A rischio          | 14,7%     | 28,8%       | Riconquistare con offerte mirate            |
 | Nel mezzo          | 34,9%     | 27,4%       | Spingere al secondo acquisto con promozioni |
-| Fedeli (rari)      | 3,1%      | 5,6%        | Incentivare il riacquisto     |
-| Persi/Basso valore | 16,4%     | 4,6%        | Riattivazione a basso costo   |
-| Nuovi/Promettenti  | 15,4%     | 4,3%        | incentivo al riacquisto |
+| Fedeli (rari)      | 3,1%      | 5,6%        | Incentivare il riacquisto                   |
+| Persi/Basso valore | 16,4%     | 4,6%        | Riattivazione a basso costo                 |
+| Nuovi/Promettenti  | 15,4%     | 4,3%        | Incentivo al riacquisto                     |
 
   
 ## Raccomandazioni
