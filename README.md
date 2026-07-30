@@ -38,10 +38,13 @@ Monetary** nella definizione dei segmenti.
 | Persi/Basso valore | 16,4%     | 4,6%        | Riattivazione a basso costo                 |
 | Nuovi/Promettenti  | 15,4%     | 4,3%        | Incentivo al riacquisto                     |
 
-  
+**Insight chiave:**
+- **Campioni + A rischio = 30% dei clienti ma ~58% del fatturato**: il valore è molto concentrato.
+- Il segmento **"A rischio" vale ~29% del fatturato (~3,9 mln R$)** pur essendo solo il 14,7% dei clienti → massima priorità per il win-back.
+
 ## Raccomandazioni
 Ogni criticità emersa dai dati si traduce in un'azione concreta:
-- **Aumentare la retention.** Il business dipende dall'acquisizione continua, che è costosa. Suggerisco di testare campagne di **win-back posto primo acquisto** (email a 30/60/90 giorni) sui segmenti RFM a rischio e di 		    misurare l'impatto sul tasso di riacquisto a 6 mesi.
+- **Aumentare la retention.** Il business dipende dall'acquisizione continua, che è costosa. Suggerisco di testare campagne di **win-back post primo acquisto** (email a 30/60/90 giorni) sui segmenti RFM a rischio e di misurare l'impatto sul tasso di riacquisto a 6 mesi.
 - **Trattare la logistica come leva strategica.** Il divario di soddisfazione tra consegne in orario (4,29) e in ritardo (2,57) impatta direttamente recensioni e riacquisto. Prioritizzare gli **stati/rotte con più ritardi** e stimare il ritorno
  di un miglioramento dei tempi sul rating medio.
 - **Concentrazione su São Paulo (~38%).** Espansione mirata su Nordest/Centro-Ovest  partendo dalle categorie già forti, monitorando il costo di acquisizione per regione.
@@ -56,9 +59,9 @@ Ogni criticità emersa dai dati si traduce in un'azione concreta:
 
 
 ##  Metodologia (pipeline)
-1. **Data Understanding** — analisi delle 9 tabelle, qualità dei dati → [`notebook/01.ipynb-Understanding`](notebook/01-Understanding.ipynb)
+1. **Data Understanding** — analisi delle 9 tabelle, qualità dei dati → [`notebook/01-Understanding.ipynb`](notebook/01-Understanding.ipynb)
 2. **Modello dati** — diagramma / star schema → [`docs/data_model.png`](docs/data_model.png)
-3. **ETL** — pulizia + caricamento in PostgreSQL → [`notebook/02-ETL .ipynb`](notebook/02-ETL.ipynb)
+3. **ETL** — pulizia + caricamento in PostgreSQL → [`notebook/02-ETL.ipynb`](notebook/02-ETL.ipynb)
 4. **Analisi SQL** — 5 domande di business come viste riusabili → [`sql/analisi.sql`](sql/analisi.sql)
 5. **Segmentazione RFM** — clienti per valore (Recency, Frequency, Monetary) → [`sql/v_rfm_segmenti.sql`](sql/v_rfm_segmenti.sql)
 6. **Visualizzazione** — dashboard interattiva in Tableau →  [`result/dashboard.png`](result/dashboard.png)
