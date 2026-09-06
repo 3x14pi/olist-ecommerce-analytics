@@ -6,6 +6,15 @@ Analisi end-to-end del dataset pubblico [Olist Brazilian E-Commerce](https://www
 
 ![Anteprima della dashboard](result/dashboard.png)
 
+**Ruolo:** Data Analyst | **Dominio:** e-commerce | **Periodo dati:** 2016-2018
+
+### Cosa dimostra questo progetto
+
+- trasformazione di dati relazionali grezzi in un modello analitico PostgreSQL;
+- analisi SQL con join, CTE, funzioni finestra e segmentazione RFM;
+- traduzione dei risultati in insight e raccomandazioni di business;
+- comunicazione dei KPI tramite una dashboard Tableau Public interattiva.
+
 ## Risultati principali
 
 -  **Fatturato ~ R$ 13,6 mln**, in crescita costante nel 2017, con **picco a novembre 2017 (Black Friday)**.
@@ -63,17 +72,17 @@ Ogni criticità emersa dai dati si traduce in un'azione concreta:
 
 ## Riproducibilità
 
-I file CSV Olist non sono inclusi nel repository GitHub per evitare di versionare oltre 160 MB di dati grezzi. Scarica il dataset dalla [fonte Kaggle](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce) e copia i CSV in `data/raw/` mantenendo i nomi originali.
+I file CSV Olist non sono inclusi nel repository GitHub per evitare di versionare oltre 160 MB di dati grezzi. Scarica il dataset dalla [fonte Kaggle](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce) e copia i CSV in `data/raw/` mantenendo i nomi originali. Il file `archive.zip` non è necessario per eseguire i notebook.
 
 ```bash
-git clone <URL_DEL_REPOSITORY>
-cd Olist-retail-analytics
+git clone https://github.com/3x14pi/olist-ecommerce-analytics.git
+cd olist-ecommerce-analytics
 python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-Il notebook ETL richiede PostgreSQL in esecuzione e un database chiamato `olist`; la password viene richiesta senza essere salvata nel codice. Le viste SQL vanno eseguite dopo il caricamento delle tabelle. I file Excel in `result/` sono snapshot già pronti per la dashboard e l'immagine PNG permette una valutazione rapida senza aprire Tableau.
+Il notebook ETL richiede PostgreSQL in esecuzione e un database chiamato `olist`; la password viene richiesta senza essere salvata nel codice. Prima di eseguire i notebook, scarica i CSV e posizionali in `data/raw/`. Le viste SQL vanno eseguite dopo il caricamento delle tabelle. I file Excel in `result/` sono snapshot già pronti per la dashboard e l'immagine PNG permette una valutazione rapida senza aprire Tableau.
 
 ## Limiti metodologici
 
@@ -91,6 +100,13 @@ Il notebook ETL richiede PostgreSQL in esecuzione e un database chiamato `olist`
 ├── requirements.txt
 └── .gitignore
 ```
+
+## Output principali
+
+- [`result/dashboard.png`](result/dashboard.png) — anteprima statica della dashboard;
+- [`result/fatturato_mensile.xlsx`](result/fatturato_mensile.xlsx) — trend mensile del fatturato;
+- [`result/categorie.xlsx`](result/categorie.xlsx) — fatturato per categoria;
+- [`result/rfm_segmenti.xlsx`](result/rfm_segmenti.xlsx) — distribuzione dei segmenti cliente.
 
 
 ## 👤 Autore
