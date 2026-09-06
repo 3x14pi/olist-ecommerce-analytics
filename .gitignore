@@ -1,0 +1,16 @@
+# Local data files are downloaded from the public source described in README.md.
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+
+# Local Python and notebook files
+__pycache__/
+.ipynb_checkpoints/
+.DS_Store
+.venv/
+venv/
+
+# Local environment and database settings
+.env
+*.sqlite
