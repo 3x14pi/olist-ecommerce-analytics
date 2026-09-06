@@ -14,3 +14,7 @@ venv/
 # Local environment and database settings
 .env
 *.sqlite
+
+# Tableau workbooks may contain embedded extracts and should stay local.
+*.twb
+*.twbx
