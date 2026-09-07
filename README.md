@@ -2,7 +2,7 @@
 
 Analisi end-to-end del dataset pubblico [Olist Brazilian E-Commerce](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce), costruita per rispondere a quattro domande di business: quanto fattura il marketplace, quali categorie e regioni generano valore, e quanto spesso i clienti tornano ad acquistare?
 
-**[Apri la dashboard interattiva su Tableau Public](https://public.tableau.com/app/profile/antonio.ferri4043/viz/Olist-AnalisiVenditeClienti/Dashboard1)**
+**[Apri la dashboard interattiva su Tableau Public](https://public.tableau.com/views/OlistAnalyticsDashboardv2/DashboardOlist?:showVizHome=no)**
 
 ![Anteprima della dashboard](result/dashboard.png)
 
@@ -110,4 +110,4 @@ Il notebook ETL richiede PostgreSQL in esecuzione e un database chiamato `olist`
 
 
 ## 👤 Autore
-**Antonio Ferri** — [Dashboard su Tableau Public](https://public.tableau.com/app/profile/antonio.ferri4043)
+**Antonio Ferri** — [Dashboard su Tableau Public](https://public.tableau.com/views/OlistAnalyticsDashboardv2/DashboardOlist?:showVizHome=no)
